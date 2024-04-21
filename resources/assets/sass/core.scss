@@ -1,0 +1,22 @@
+.d-none{
+    display: none;
+}
+.m-10{
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    height: 40px;
+    z-index: 1;
+}
+.loginText{
+    position: relative;
+    top:15px;
+    left: 15px;
+    color: white;
+}
+.article{
+    border: 1px;
+}

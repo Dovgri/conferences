@@ -1,15 +1,16 @@
+<link rel="stylesheet" href="{{mix('css/app.css')}}">
 <form action="{{route('login')}}" method="POST">
     @csrf
-    <div>
-        <label for = "title-input">Username</label>
-        <input type="text" id="title-input" name="username" value="{{old('username')}}">
+    <div class="form-group">
+        <label class="form-label" for = "title-input">Username</label>
+        <input class="form-input" type="text" id="title-input" name="username" value="{{old('username')}}">
         @error('username')
         <p>{{$message}}</p>
         @enderror
     </div>
-    <div>
-        <label for="password-input">Password</label>
-        <input type="password" id="password-input" name="password" value="{{old('password')}}">
+    <div class="form-group">
+        <label class="form-label" for="password-input">Password</label>
+        <input class="form-input" type="password" id="password-input" name="password" value="{{old('password')}}">
         @error('password')
         <p>{{$message}}</p>
         @enderror

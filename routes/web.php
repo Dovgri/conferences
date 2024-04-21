@@ -26,3 +26,10 @@ Route::post('login', [LoginController::class, 'login'])->name('login');
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('greeting/{locale}', static function ($locale) {
+    if(!in_array($locale,['en','lt'])){
+        abort(400);
+    }
+    App::setLocale($locale);
+})->name('greeting.locale');

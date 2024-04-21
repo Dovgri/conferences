@@ -109,7 +109,7 @@ class ArticleController extends Controller
         $article = (new Article())->findOrFail($id);
         $article->delete();
         session()->flash('status', "Article deleted successfully");
-        return redirect()->route('articles.index');
+        return redirect()->route('home.index');
     }
 
     /**
